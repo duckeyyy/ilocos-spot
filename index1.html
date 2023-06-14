@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+	<title>Tourist Spot</title>
+	<style>
+		/* Add your CSS styles here */
+		.form-container {
+			display: none;
+			text-align: center;
+			margin-top: 20px;
+		}
+	</style>
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			let places = document.querySelectorAll('.place-list li');
+			let active = "https://wallpaperaccess.com/full/3101642.jpg";
+			let signUpButton = document.querySelector('.sign-up-button');
+			let loginButton = document.querySelector('.login-button');
+			let formContainer = document.querySelector('.form-container');
+
+			places.forEach((e) => {
+				e.addEventListener("mouseenter", (event) => {
+					e.classList.remove("active");
+				});
+
+				e.addEventListener("mouseleave", (event) => {
+					e.classList.add("active");
+					active = e.getAttribute('data-img');
+					let banner = document.querySelector('.banner');
+					banner.style.backgroundImage = `url('${active}')`;
+				});
+			});
+
+			signUpButton.addEventListener('click', function() {
+				formContainer.style.display = 'block';
+			});
+
+			loginButton.addEventListener('click', function() {
+				formContainer.style.display = 'block';
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<div class="logo">ILOCOS SPOTS</div>
+			<ul>
+				<li>Home</li>
+				<li>About</li>
+			</ul>
+			<button class="login-button">Login</button>
+			<button class="sign-up-button">Sign-up</button>
+		</div>
+		<div class="banner" style="background-image: url(https://abnormallycurious.files.wordpress.com/2015/11/img_0392.jpg?w=740);">
+			<div class="glass-wrapper"></div>
+		</div>
+		<div class="hero-title">
+			<p>Discover</p>
+			<p class="country"> The Ilocos</p>
+			<div class="details">Composed of two provinces: Ilocos Norte and Ilocos Sur. They are also called "Cradle of Philippine Civilization". Known for its rich history, vibrant culture, and stunning natural landscapes, the Ilocos region attracts both local and international tourists. </div>
+			<div class="explore">
+				<button>Explore more</button>
+			</div>
+		</div>
+		<div class="tourist-list">
+			<ul class="place-list">
+				<li class="active" data-img="assets/img/vigan1.webp">
+					<div class="thumbnail" style="background: url(assets/img/vigan1.webp);">
+						<div class="details">
+							<p class="province">Vigan</p>
+							<p class="place-name">Vigan Crisologo</p>
+						</div>
+					</div>
+				</li>
+				<li data-img="assets/img/saud1.jpg">
+					<div class="thumbnail" style="background: url(assets/img/saud1.jpg);">
+						<div class="details">
+							<p class="province">Ilocos Norte</p>
+							<p class="place-name">Saud White Beach</p>
+						</div>
+					</div>
+				</li>
+				<li data-img="https://2.bp.blogspot.com/--8rUG40AXp8/Uohpje7ATtI/AAAAAAAAAE4/dmFDLpZDADw/s1600/Patapat_Viaduct_in_Pagudpud.jpg">
+					<div class="thumbnail" style="background: url(https://2.bp.blogspot.com/--8rUG40AXp8/Uohpje7ATtI/AAAAAAAAAE4/dmFDLpZDADw/s1600/Patapat_Viaduct_in_Pagudpud.jpg);">
+						<div class="details">
+							<p class="province">Ilocos Norte</p>
+							<p class="place-name">Patapat Viaduct</p>
+						</div>
+					</div>
+				</li>
+				<li data-img="assets/img/windmill1.jpg">
+					<div class="thumbnail" style="background: url(assets/img/windmill1.jpg);">
+						<div class="details">
+							<p class="province">Bangui</p>
+							<p class="place-name">Bangui Wind Farm</p>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="form-container">
+			<!-- Sign-up form -->
+			<form id="signup-form" style="display: none;">
+				<h2>Sign Up</h2>
+				<!-- Add your sign-up form fields here -->
+				<input type="text" name="name" placeholder="Name" required>
+				<input type="email" name="email" placeholder="Email" required>
+				<input type="password" name="password" placeholder="Password" required>
+				<button type="submit">Sign Up</button>
+			</form>
+			
+			<!-- Login form -->
+			<form id="login-form" style="display: none;">
+				<h2>Login</h2>
+				<!-- Add your login form fields here -->
+				<input type="text" name="name" placeholder="Name" required>
+				<input type="email" name="email" placeholder="Email" required>
+				<input type="password" name="password" placeholder="Password" required>
+				<button type="submit">Log-in</button>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

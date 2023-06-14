@@ -1,0 +1,149 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family: "Poppins", sans-serif;
+}
+
+.header {
+	padding: 1.5rem;
+	display: flex;
+	justify-content: space-between;
+	max-width: 1200px;
+	margin: 0px auto;
+	align-items: center;
+}
+
+.header .logo {
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-weight: 600;
+	font-size: 25px;
+	color: #fff;
+}
+
+.header ul {
+	display: flex;
+	list-style: none;
+	gap: 7rem;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-weight: 300;
+	font-size: 16px;
+	color: #fff;
+}
+
+.banner {
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0px;
+	z-index: -1;
+}
+
+.banner .glass-wrapper {
+	width: 30%;
+	height: 100%;
+	backdrop-filter: blur(10px) saturate(161%);
+    -webkit-backdrop-filter: blur(10px) saturate(161%);
+    background-color: rgba(255, 255, 255, 0.16);
+    border-radius: 0px 12px 12px 0px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+}
+
+.hero-title {
+	max-width: 1200px;
+	margin: 0px auto;
+	padding-top: 2rem;
+}
+
+.hero-title p {
+	font-size: 47px;
+	font-weight: 800;
+	text-transform: uppercase;
+	line-height: 60px;
+	color: #fff;
+}
+
+.hero-title .country {
+	font-size: 85px;
+	letter-spacing: 3px;
+}
+
+.hero-title .details {
+	width: 60%;
+	padding-top: 1.5rem;
+	color: #fff;
+	font-weight: 200;
+	letter-spacing: 1.5px;
+	padding-bottom: 2.5rem;
+}
+
+.hero-title .explore button {
+	backdrop-filter: blur(25px) saturate(0%);
+   	-webkit-backdrop-filter: blur(25px) saturate(0%);
+   	background-color: rgba(255, 255, 255, 0.33);
+   	border-radius: 12px;
+   	border: 1px solid rgba(209, 213, 219, 0.3);
+   	border: none;
+   	color: #fff;
+   	padding: 12px 50px;
+   	border-radius: 50px;
+   	letter-spacing: 1.5px;
+   	cursor: pointer;
+}
+
+.tourist-list {
+	bottom: 25px;
+	position: absolute;
+	left: 20rem;
+}
+
+.tourist-list p {
+	color: #000;
+	padding-left: 20px;
+	margin-bottom: auto;
+	line-height: 24px;
+}
+
+.tourist-list ul {
+	display: flex;
+	gap: 20px;
+	list-style: none;
+	width: 65vw;
+	height: 13rem;
+	align-items: center;
+}
+
+.tourist-list .thumbnail {
+	display: flex;
+	height: 9rem;
+	width: 15rem;
+	background-size: cover !important;
+	border-radius: 8px;
+	flex-direction: column;
+}
+
+.tourist-list .thumbnail .details {
+	margin-top: auto;
+	padding: 5px 0px;
+	backdrop-filter: blur(0px) saturate(116%);
+    -webkit-backdrop-filter: blur(0px) saturate(116%);
+    background-color: rgba(255, 255, 255, 0.11);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+}
+
+.details .place-name {
+	font-size: 24px;
+	font-weight: 600;
+}
+
+.details .province {
+	font-weight: 300;
+}
+
+.tourist-list .active {
+	margin-top: -5rem;
+}
+
