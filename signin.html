@@ -9,15 +9,31 @@
 			max-width: 400px;
 			margin: 0 auto;
 			padding: 20px;
-			border: 1px solid #ccc;
-			border-radius: 5px;
 			text-align: center;
-			background-color: #fff;
+			 backdrop-filter: blur(16px) saturate(180%);
+    		-webkit-backdrop-filter: blur(16px) saturate(180%);
+    		background-color: rgba(255, 255, 255, 0.75);
+    		border-radius: 12px;
+    		border: 1px solid rgba(209, 213, 219, 0.3);
 			position: fixed;
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
 		}
+
+		.container label {
+		text-align: left;
+		display: block;
+		margin-bottom: 10px;
+		}
+
+		.container .links a {
+		padding: 5px;
+		gap: 1.5rem;
+		text-decoration: none;
+		margin: 0px auto;
+		}
+
 
 		input[type="text"],
 		input[type="password"] {
@@ -62,9 +78,16 @@
 	<title>Ilocos Spot</title>
 </head>
 <body>
-	<div class="banner" style="background-image: url(https://abnormallycurious.files.wordpress.com/2015/11/img_0392.jpg?w=740);"></div>
+	<div class="header">
+		<div class="logo">ILOCOS SPOTS</div>
+			<ul>
+				<li>Home</li>
+				<li>About</li>
+			</ul>
+	</div>
+	<div class="banner" style="background-image: url(assets/img/saud1.jpg);"></div>
 	<nav>
-		<form action="/action_page.php" style="border:1px solid #ccc" class="container">
+		<form style="border:1px solid #ccc" class="container">
 			<h1>Sign Up</h1>
 			<p>Please fill in this form to create an account.</p>
 			<hr>
@@ -75,23 +98,23 @@
 			<label for="psw"><b>Password</b></label>
 			<input type="password" placeholder="Enter Password" name="psw" required>
 
-			<label for="psw-repeat"><b>Repeat Password</b></label>
-			<input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+			<label for="psw-repeat"><b>Confirm Password</b></label>
+			<input type="password" placeholder="Confirm Password" name="psw-repeat" required>
 
 			<label>
 				<input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
 			</label>
 
-			<div class="clearfix">
-				<button type="button" class="cancelbtn">Cancel</button>
-				<button type="submit" class="signupbtn" onclick="redirectToWebsite()">Sign Up</button>
+			<div class="links">
+				<a id="cancel" href="">Cancel</a>
+				<a id="signin" href="https://duckeyyy.github.io/ilocos-spot/index2.html">Sign Up</a>
 			</div>
 		</form>
 	</nav>
 
 	<script>
 		function redirectToWebsite() {
-			window.location.href = "index2.html";
+			window.location.href = "https://duckeyyy.github.io/ilocos-spot/index2.html";
 		}
 	</script>
 </body>
